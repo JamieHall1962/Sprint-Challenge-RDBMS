@@ -1,0 +1,22 @@
+{
+  "name": "Sprint_Challenge_RDBMS",
+  "version": "1.0.0",
+  "description": "Sprint Challenge RDBMS",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": "https://github.com/JamieHall1962/Sprint-Challenge-RDBMS.git",
+  "author": "Jamie Hall <hall.jamie@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "helmet": "^3.14.0",
+    "knex": "^0.16.3",
+    "sqlite3": "^4.0.2"
+  }
+}

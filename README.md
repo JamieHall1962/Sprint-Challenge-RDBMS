@@ -30,7 +30,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 1. Explain the difference between `RDBMS` and `SQL`.
 
-
+RDBMS means Relational Data Base Management System. It is the means by which we create, update, and maintain our data. SQL is a query language which allows us to retrieve data from the data base.
 
 2. Why do tables need a `primary key`?
 
@@ -44,7 +44,7 @@ Foreign Key
 
 4. What do we need in order to have a _many to many_ relationship between two tables.
 
-A connection from the foreign key on one table to the primary key on the other table
+A connection from the foreign key on one table to the primary key on the other table(s)
 
 
 ## Project Set Up

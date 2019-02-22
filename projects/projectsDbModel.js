@@ -36,9 +36,8 @@ const db = knex(knexConfig.development);
 module.exports = {
   createProject,
   readProject,
-  readProjectById,
-  readActionsByProjectId
-};
+  readProjectById
+ };
 
 // The C in CRUD
 
@@ -60,6 +59,4 @@ function readProjectById(id) {
     .first();
 }
 
-function readActionsByProjectId(id) {
-  return db("actions").where({ id });
-}
+

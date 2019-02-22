@@ -27,3 +27,39 @@
 //   ]
 // }
 // ```
+
+const knex = require("knex");
+
+const knexConfig = require("../knexfile.js");
+const db = knex(knexConfig.development);
+
+module.exports = {
+  createProject,
+  readProject,
+  readProjectById,
+  readActionsByProjectId
+};
+
+// The C in CRUD
+
+function createProject(project) {
+  return db("projects")
+    .insert(project)
+    .into("projects");
+}
+
+// The R in CRUD
+
+function readProject() {
+  return db("projects");
+}
+
+function readProjectById(id) {
+  return db("projects")
+    .where({ id })
+    .first();
+}
+
+function readActionsByProjectId(id) {
+  return db("actions").where({ id });
+}

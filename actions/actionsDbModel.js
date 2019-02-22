@@ -27,3 +27,31 @@
 //   ]
 // }
 // ```
+
+
+const knex = require("knex");
+
+const knexConfig = require("../knexfile.js");
+const db = knex(knexConfig.development);
+
+module.exports = {
+  createAction,
+  readAction,
+  readActionById
+};
+
+function createAction(action) {
+    return db("actions")
+      .insert(action)
+      .into("actions");
+  }
+
+function readAction() {
+  return db("actions");
+}
+function readActionById(id) {
+  return db("projects")
+    .where({ id })
+    .first();
+}
+
